@@ -33,15 +33,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ###### - Tile Menu Example
 
 ```
-	{
-		name: 'A & G Management',
-		title: 'G & A  Management',
-		id : "a_g_Box",
-		class: 'kt-iconbox--success',
-		iconUrl: './assets/media/logos/grievances-icon.png',
-		disable: false,
-		landingPage: '/custom/mycases'
-       }
+{
+	name: 'A & G Management',
+	title: 'G & A  Management',
+	id : "a_g_Box",
+	class: 'kt-iconbox--success',
+	iconUrl: './assets/media/logos/grievances-icon.png',
+	disable: false,
+	landingPage: '/custom/mycases'
+}
 ```
 
 
