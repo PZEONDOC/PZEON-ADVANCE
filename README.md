@@ -48,13 +48,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ###### - Header Menu Example
 ```
 {
-	title: 'Expedite',
-	id: 'showExpediteCaseBtn',
+	title: 'INCIDENT LIBRARY',
 	root: true,
-	page: '/feature/6100/inbox',  OR onClick: 'getExpediteCaseNotification',
-	alignment: 'left',
-	icon: 'fa fa-bell',
-	target: '_self',
+	id: 'incidentLibrary',
+	page: '',
+	icon: 'fa fa-plus',
+	target: "_self",
+	onClick: 'createIncident'
 	notification: {
 	    badge: {
 		value: 0,
