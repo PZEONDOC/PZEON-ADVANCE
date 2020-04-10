@@ -26,3 +26,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	    public idpLoginURL = false;
   }
   ```
+
+## Application Menu Configuration (menu.config.ts)
