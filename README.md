@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 
 
-## Aplication Lable Confiugration (app.config.ts)
+## Aplication Lable Configuration (app.config.ts)
 ```
   export class AppConfig {
 	    public version: any = "6.4.0";
