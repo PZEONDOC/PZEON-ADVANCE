@@ -51,11 +51,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	title: 'Expedite',
 	id: 'showExpediteCaseBtn',
 	root: true,
-	page: '/feature/6100/inbox',
+	page: '/feature/6100/inbox',  OR onClick: 'getExpediteCaseNotification',
 	alignment: 'left',
 	icon: 'fa fa-bell',
 	target: '_self',
-	onClick: 'getExpediteCaseNotification',
+	
 	notification: {
 	    badge: {
 		value: 0,
