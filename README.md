@@ -14,3 +14,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 
+
+
+## Aplication Lable Confiugration (app.config.ts)
+```
+  export class AppConfig {
+	    public version: any = "6.4.0";
+	    public headerLogo="./assets/media/logos/logo.png";
+	    public isFloatingMenu: Boolean = true;
+	    public landingPage = '';
+	    public idpLoginURL = false;
+  }
+  ```
