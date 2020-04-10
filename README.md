@@ -54,7 +54,21 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	page: '',
 	icon: 'fa fa-plus',
 	target: "_self",
-	onClick: 'createIncident'
+	onClick: 'createIncident',
+	submenu: [
+		  {
+			title: 'Chart',
+			bullet: 'dot',
+			icon: 'fa fa-plus',
+			page: '/custom/chart',
+			submenu: [{
+				title: 'Pie',
+				bullet: 'dot',
+				icon: 'fa fa-plus',
+				page: '/custom/pie'
+			   }]
+		  }
+	],
 	notification: {
 	    badge: {
 		value: 0,
