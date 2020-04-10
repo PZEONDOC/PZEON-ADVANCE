@@ -55,7 +55,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	alignment: 'left',
 	icon: 'fa fa-bell',
 	target: '_self',
-	
 	notification: {
 	    badge: {
 		value: 0,
