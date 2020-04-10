@@ -1,6 +1,8 @@
 # PZEON ADVANCE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2. 
+Node: 12.13.1
+Angular: 8.2.2
 
 ## Development server
 
