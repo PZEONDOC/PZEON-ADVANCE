@@ -24,6 +24,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	    public isFloatingMenu: Boolean = true;
 	    public landingPage = '';
 	    public idpLoginURL = false;
+	    public topMenuLimit = 8;
   }
   ```
 
