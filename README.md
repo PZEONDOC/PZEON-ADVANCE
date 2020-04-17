@@ -82,7 +82,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	    }
        }
   }
+  ```
 ## Bundle Configuration (bundle.config.ts)
+
         {
             "id": 6100,
             "name": "Case Details",
@@ -279,8 +281,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
                                 "hidden": false,
                                 "value": ""
                             }
-						},
-						{
+			},
+			{
                             "name": "recentData.member_lastname",
                             "class": "col-md-12",
                             "operator": "$eq",
@@ -288,8 +290,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
                                 "hidden": false,
                                 "value": ""
                             }
-						},
-						{
+			},
+			{
                             "name": "recentData.memberTelephoneNumber",
                             "class": "col-md-12",
                             "operator": "$eq",
@@ -298,7 +300,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
                                 "value": ""
                             }
                         },
-						{
+			{
                             "name": "recentData.memberDob",
                             "class": "col-md-12",
                             "operator": "$eq",
@@ -525,5 +527,103 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
             },
             "$$hashKey": "object:130"
         }
-## Widget Configuration (box.config.ts)
+	
+## Widget Configuration
+
+#### Bundle Filter Widget
+```
+{
+    "name"                : "incidentClosedBy",
+    "singleSelect"        : true,
+    "text"                : "Incident Closed By",
+    "HeaderText"          : "Incident Closed By",
+    "widget"              : "bundleFilter",
+    "oneLiner"            : true,
+    "disabled"            : false,
+    "hidden"              : false,
+    "mandatory"           : false,
+    "tabIndex"            : 1, 
+    "listeners"           : {
+                          	"change": { methodName: "update", param: "value" }
+                            },
+    "bundleInfo"          : {
+                              "minCharacterForLikeSearch" : 3,
+                              "bundleId" : 7100, 
+                              "key" : "recentData.userFullName",
+                              "value" : "recentData.userID",
+                              "defaultLoadQuery": "{
+                                "recentData#member_id" : ""
+                              }",
+                              "defaultQuery" : { 
+                                "recentData#member_id" : ""
+                              },
+                              "displayList" : [
+				      {
+					"label" : "Full Name",
+					"key" : "userFullName",
+					"value" : "recentData.userFullName"
+				      }, 
+				      {
+					"label" : "User Id",
+					"key" : "userID",
+					"value" : "recentData.userID"
+				      }, 
+				      {
+					"label" : "EmailId",
+					"key" : "userEmailId",
+					"value" : "recentData.userEmailId"
+				      }
+                            ],
+                            "filters" : [
+                                            {
+                                                "label" : "Member ID",
+                                                "key" : "recentData.member_id",
+                                                "value" : "recentData.member_id",
+                                                "widget" : "textfield",
+                                                "likeSearch" : true,
+                                                "linkToparent" : false
+                                            }, 
+                                            {
+                                                "label" : "Member First Name",
+                                                "key" : "recentData.memberFirstName",
+                                                "value" : "recentData.memberFirstName",
+                                                "widget" : "textfield",
+                                                "likeSearch" : true,
+                                                "linkToparent" : false
+                                            }, 
+                                            {
+                                                "label" : "Date of Birth",
+                                                "key" : "recentData.memberDob",
+                                                "value" : "recentData.memberDob",
+                                                "type" : "date",
+                                                "widget" : "datefield",
+                                                "likeSearch" : true,
+                                                "linkToparent" : false
+                                            },
+                                      ]
+    }
+}
+```
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "incidentClosedBy" |
+| singleSelect  | Boolean  | Allow user select multiple items | true or false |
+| text  | String  | Label for the widget | "Incident Closed By" |
+| HeaderText  | String  | Title of the bundle filter modal | "Incident Closed By" |
+| widget  | String  | Name of the widget |  "bundleFilter" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | true or false |
+| bundleInfo.minCharacterForLikeSearch  | Number  | Minimum character for search | 3 |
+| bundleInfo.bundleId  | Number  | Bundle Id for Search | 7100 |
+| bundleInfo.key  | String  | Key for Search | "recentData.userFullName" |
+| bundleInfo.value  | String  | Value for search | "recentData.userID" |
+| bundleInfo.defaultLoadQuery  | Object  | Execute a query when bundle filter loads | "defaultLoadQuery": "{"recentData#member_id" : "" }", |
+| bundleInfo.defaultQuery  | Object  | Execute a query on search | "defaultQuery": "{"recentData#member_id" : "" }", |
+| bundleInfo.defaultSortQuery  | Object  | Execute a query on search used for sorting operation | "defaultSortQuery": "{"recentData#member_id" : "" }", |
+| bundleInfo.displayList  | Array of Object  | Contain list of object having the display information on search | |
+| bundleInfo.filters  | Array of Object  | Contain list of object having the filter information of bundle filter | |
 
