@@ -564,8 +564,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	"tabIndex": 1,
 	"listeners": {
 		"change": {
-			"methodName": "update",
-			"param": "value"
+			"methodName": "update"
 		}
 	},
 	"bundleInfo": {
@@ -636,7 +635,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | hidden  | Boolean  | Hidden status of the widget | true or false |
 | mandatory  | Boolean  | Mandatory status of the widget | true or false |
 | tabIndex  | Number  | Tab index for the widget | true or false |
-| listeners  | Object  | Contain listers information for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "update"} |
 | bundleInfo.minCharacterForLikeSearch  | Number  | Minimum character for search | 3 |
 | bundleInfo.bundleId  | Number  | Bundle Id for Search | 7100 |
 | bundleInfo.key  | String  | Key for Search | "recentData.userFullName" |
@@ -647,3 +646,42 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | bundleInfo.displayList  | Array of Object  | Contain list of object having the display information on search | |
 | bundleInfo.filters  | Array of Object  | Contain list of object having the filter information of bundle filter | |
 
+
+
+#### Comment widget
+
+     {
+     	"name": "nonMedicalReviewerComment",
+     	"text": "Reviewer's Comment",
+     	"widget": "comment",
+     	"emptyText": "Type your comment here...",
+     	"emptyCommentText": "No comments added yet",
+     	"commentTimeFormat": "MM-DD-YYYY hh:mm:ss",
+     	"commentOrder": "desc",
+     	"canUserDelete": true,
+     	"canAdminDelete": false,
+     	"showCount": true,
+     	"listeners": {
+     		"change": {
+     			"methodName": "update"
+     		}
+     	}
+     }
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "caseType" |
+| text  | String  | Label for the widget | "Case Type" |
+| widget  | String  | Name of the widget |  "comment" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| emptyText  | String  | Text for placeholder | "Type your comment here..." |
+| emptyCommentText  | String  | Display this text if there is no comment | "No comments added yet" |
+| commentTimeFormat  | String  | Timeformat to display in comment widget | "MM-DD-YYYY hh:mm:ss" |
+| canUserDelete  | Boolean  | Giving permission to user for delete comment | true or false |
+| canAdminDelete  | Boolean  | Giving permission to admin for delete comment | true or false |
+| showCount  | true  | Show status of the count value in comment widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "update"} |
