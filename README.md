@@ -685,3 +685,482 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | canAdminDelete  | Boolean  | Giving permission to admin for delete comment | true or false |
 | showCount  | true  | Show status of the count value in comment widget | true or false |
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "update"} |
+
+#### Combo widget
+
+##### Normal Combo
+{
+	"name": "caseType",
+	"text": "Case Type",
+	"description": "Case Type",
+	"oneLiner": true,
+	"type": "string",
+	"tabIndex": 1,
+	"widget": "combo",
+	"properties": {
+		"datasource": [
+			"High",
+			"Medium High",
+			"Medium",
+			"Low"
+		],
+		"multiselect": false
+	},
+	"mandatory": true
+}
+
+##### Hierarchical Combo
+
+###### Parent Combo
+{
+  "name": "grievanceCategory",
+  "text": "Grievance Category",
+  "dataIndex": "grievanceCategory",
+  "renderer": "",
+  "width": "100px",
+  "description": "Grievance Category",
+  "securityContext": false,
+  "type": "string",
+  "tabIndex": 1,
+  "tooltip": {
+    "enabled": false,
+    "format": null
+  },
+  "mandatory": false,
+  "hidden": true,
+  "ownerEditable": false,
+  "widget": "combo",
+  "selectAllOption": true,
+  "selectAllOptionText": "All",
+  "properties": {
+    "datasource": [
+      "ACCESS AND AVAILABILITY",
+      "MARKETING",
+      "ENROLLMENT/DISENROLLMENT",
+      "QUALITY OF CARE",
+      "QUALITY OF SERVICE",
+      "POTENTIAL FRAUD/ABUSE",
+      "BILLING/FINANCIAL DISPUTE",
+      "CONFIDENTIALITY/PRIVACY",
+      "BENEFIT PACKAGE",
+      "APPEALS",
+      "GRIEVANCES",
+      "CMS ISSUES"
+    ],
+    "grievanceSubcategoryOptions": [
+      {
+        "masterValue": "ACCESS AND AVAILABILITY",
+        "options": [
+          "DENTAL",
+          "HOSPITAL",
+          "MAIL ORDER REFILLS",
+          "PCP",
+          "SPECIALIST",
+          "PHARMACY",
+          "PLAN",
+          "DISCRIMINATION",
+          "ANCILLARIES",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "MARKETING",
+        "options": [
+          "AGENT ALLEGATION",
+          "MARKETING MATERIALS",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "ENROLLMENT/DISENROLLMENT",
+        "options": [
+          "ENROLLMENT/DISENROLLMENT DATE",
+          "ENROLLMENT MATERIALS",
+          "INVOLUNTARY ENROLLMENT/DISENROLLMENT",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF CARE",
+        "options": [
+          "DENTAL",
+          "HOSPITAL",
+          "PCP",
+          "SPECIALIST",
+          "PHARMACY",
+          "ANCILLARIES",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF SERVICE",
+        "options": [
+          "NOT SATISFIED WITH PLAN SERVICES",
+          "NOT SATISFIED WITH PROVIDER SERVICES",
+          "CARE MANAGEMENT PROGRAMS",
+          "DISCRIMINATION",
+          "SALES INTEGRITY",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "POTENTIAL FRAUD/ABUSE",
+        "options": [
+          "SERVICES WERE NEVER RENDERED",
+          "MEDICATION NOT RECEIVED",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BILLING/FINANCIAL DISPUTE",
+        "options": [
+          "BALANCE BILLING",
+          "PROVIDER CLAIM ISSUES",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BENEFIT PACKAGE",
+        "options": [
+          "CO-PAYMENT ISSUES",
+          "BENEFITS AVAILABLE IN PLAN",
+          "VAIS",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "CONFIDENTIALITY/PRIVACY",
+        "options": [
+          "HIPAA VIOLATION/PRIVACY BREACH"
+        ]
+      },
+      {
+        "masterValue": "APPEALS",
+        "options": [
+          "PLAN RESPONSE UNSATISFACTORY/UNTIMELY",
+          "PLAN DOES NOT PROVIDE APPROPRIATE APPEALS PROCESS",
+          "OTHER",
+          "DECLINED EXPEDITED TIMEFRAME (ETD)",
+          "DISSATISFIED WITH TIMEFRAME EXTENSION (PTE)"
+        ]
+      },
+      {
+        "masterValue": "GRIEVANCES",
+        "options": [
+          "PLAN RESPONSE UNSATISFACTORY/UNTIMELY",
+          "PLAN DOES NOT PROVIDE APPROPIATE GRIEVANCE PROCESS",
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "CMS ISSUES",
+        "options": [
+          "OTHER"
+        ]
+      }
+    ],
+    "partCCMSCategoryOptions": [
+      {
+        "masterValue": "ACCESS AND AVAILABILITY",
+        "options": [
+          "ACCESS"
+        ]
+      },
+      {
+        "masterValue": "CMS ISSUES",
+        "options": [
+          "GRIEVANCES RELATED TO CMS ISSUES"
+        ]
+      },
+      {
+        "masterValue": "MARKETING",
+        "options": [
+          "MARKETING"
+        ]
+      },
+      {
+        "masterValue": "ENROLLMENT/DISENROLLMENT",
+        "options": [
+          "ENROLLMENT/DISENROLLMENT"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF CARE",
+        "options": [
+          "QUALITY OF CARE"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF SERVICE",
+        "options": [
+          "CUSTOMER SERVICE"
+        ]
+      },
+      {
+        "masterValue": "POTENTIAL FRAUD/ABUSE",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BILLING/FINANCIAL DISPUTE",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BENEFIT PACKAGE",
+        "options": [
+          "BENEFIT PACKAGE"
+        ]
+      },
+      {
+        "masterValue": "CONFIDENTIALITY/PRIVACY",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "APPEALS",
+        "options": [
+          "ORGANIZATION DETERMINATION AND RECONSIDERATION PROCESS"
+        ]
+      },
+      {
+        "masterValue": "GRIEVANCES",
+        "options": [
+          "OTHER"
+        ]
+      }
+    ],
+    "partDGrievanceCMSCategories1Options": [
+      {
+        "masterValue": "ACCESS AND AVAILABILITY",
+        "options": [
+          "PHARMACY ACCESS"
+        ]
+      },
+      {
+        "masterValue": "MARKETING",
+        "options": [
+          "MARKETING"
+        ]
+      },
+      {
+        "masterValue": "ENROLLMENT/DISENROLLMENT",
+        "options": [
+          "ENROLLMENT/DISENROLLMENT"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF CARE",
+        "options": [
+          "QUALITY OF CARE"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF SERVICE",
+        "options": [
+          "CUSTOMER SERVICE"
+        ]
+      },
+      {
+        "masterValue": "POTENTIAL FRAUD/ABUSE",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BILLING/FINANCIAL DISPUTE",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "CONFIDENTIALITY/PRIVACY",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BENEFIT PACKAGE",
+        "options": [
+          "PLAN BENEFITS"
+        ]
+      },
+      {
+        "masterValue": "APPEALS",
+        "options": [
+          "COVERAGE DETERMINATIONS/REDETERMINATION PROCESS"
+        ]
+      },
+      {
+        "masterValue": "GRIEVANCES",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "CMS ISSUES",
+        "options": [
+          "CMS ISSUES"
+        ]
+      }
+    ],
+    "defaultValue": "",
+    "multiselect": false
+  },
+  "emptyText": "",
+  "iconClass": "fa clip-user-5",
+  "rules": [],
+  "value": "",
+  "hierarchy": true,
+  "childCombo": [
+    "grievanceSubcategory",
+    "partCCMSCategory",
+    "partDGrievanceCMSCategories1"
+  ],
+  "oneLiner": true,
+  "disabled": false,
+  "listeners": {
+    "change": {
+      "methodName": "showGrievanceCategoryDescription",
+      "param": "value"
+    }
+  }
+}
+
+###### Child Combo
+
+{
+  "name": "partCCMSCategory",
+  "text": "Part C Grievance CMS Category <i class='fa fa-info-circle' title='CMS Universe Field'></i>",
+  "dataIndex": "partCCMSCategory",
+  "renderer": "",
+  "width": "100px",
+  "description": "Part C CMS Category",
+  "type": "string",
+  "tabIndex": 1,
+  "tooltip": {
+    "enabled": false,
+    "format": null
+  },
+  "hidden": true,
+  "mandatory": false,
+  "ownerEditable": false,
+  "widget": "combo",
+  "hierarchy": true,
+  "masterCombo": "grievanceCategory",
+  "selectAllOption": true,
+  "selectAllOptionText": "All",
+  "properties": {
+    "datasource": [
+      "ACCESS",
+      "MARKETING",
+      "ENROLLMENT/DISENROLLMENT",
+      "GRIEVANCES RELATED TO CMS ISSUES",
+      "QUALITY OF CARE",
+      "BENEFIT PACKAGE",
+      "CUSTOMER SERVICE",
+      "OTHER",
+      "ORGANIZATION DETERMINATION AND RECONSIDERATION PROCESS"
+    ],
+    "defaultValue": "",
+    "multiselect": false,
+    "hierarchyOptions": [
+      {
+        "masterValue": "ACCESS AND AVAILABILITY",
+        "options": [
+          "ACCESS"
+        ]
+      },
+      {
+        "masterValue": "CMS ISSUES",
+        "options": [
+          "GRIEVANCES RELATED TO CMS ISSUES"
+        ]
+      },
+      {
+        "masterValue": "MARKETING",
+        "options": [
+          "MARKETING"
+        ]
+      },
+      {
+        "masterValue": "ENROLLMENT/DISENROLLMENT",
+        "options": [
+          "ENROLLMENT/DISENROLLMENT"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF CARE",
+        "options": [
+          "QUALITY OF CARE"
+        ]
+      },
+      {
+        "masterValue": "QUALITY OF SERVICE",
+        "options": [
+          "CUSTOMER SERVICE"
+        ]
+      },
+      {
+        "masterValue": "POTENTIAL FRAUD/ABUSE",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BILLING/FINANCIAL DISPUTE",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "BENEFIT PACKAGE",
+        "options": [
+          "BENEFIT PACKAGE"
+        ]
+      },
+      {
+        "masterValue": "CONFIDENTIALITY/PRIVACY",
+        "options": [
+          "OTHER"
+        ]
+      },
+      {
+        "masterValue": "APPEALS",
+        "options": [
+          "ORGANIZATION DETERMINATION AND RECONSIDERATION PROCESS"
+        ]
+      },
+      {
+        "masterValue": "GRIEVANCES",
+        "options": [
+          "OTHER"
+        ]
+      }
+    ]
+  },
+  "emptyText": "",
+  "value": "",
+  "iconClass": "fa clip-user-5",
+  "rules": [],
+  "listeners": {},
+  "disabled": true,
+  "oneLiner": true
+}
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "caseType" |
+| text  | String  | Label for the widget | "Case Type" |
+| widget  | String  | Name of the widget |  "combo" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "update"} |
+| properties.datasource  | Array  | Contain datasource for Combo | ["High", "Medium High"] |
+| properties.multiselect  | Boolean  | Multiple select status for Combo | true or false |
