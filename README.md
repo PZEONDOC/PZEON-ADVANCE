@@ -689,6 +689,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 #### Combo widget
 
 ##### Normal Combo
+```
 {
 	"name": "caseType",
 	"text": "Case Type",
@@ -708,10 +709,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	},
 	"mandatory": true
 }
+```
 
 ##### Hierarchical Combo
 
 ###### Parent Combo
+```
 {
   "name": "grievanceCategory",
   "text": "Grievance Category",
@@ -1029,9 +1032,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
     }
   }
 }
+```
 
 ###### Child Combo
-
+```
 {
   "name": "partCCMSCategory",
   "text": "Part C Grievance CMS Category <i class='fa fa-info-circle' title='CMS Universe Field'></i>",
@@ -1150,6 +1154,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   "disabled": true,
   "oneLiner": true
 }
+```
 
 | Properties  | Type | Description | Example |
 | ----------  | ---- | ----------- | ------- |
