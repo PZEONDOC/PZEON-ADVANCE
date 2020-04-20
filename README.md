@@ -1217,3 +1217,48 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | tabIndex  | Number  | Tab index for the widget | true or false |
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "notifyUsersCheckBoxChange"} |
 | properties.children  | Array  | Contain checkboxlist | See the above config |
+
+#### Button Group widget
+```
+{
+  "name": "fetchMemberIdSearch",
+  "widget": "buttonGroup",
+  "cls": "fetchMemberId",
+  "hidden": false,
+  "disabled": false,
+  "buttons": [
+    {
+      "name": "fetchMemberIdSearch",
+      "label": "Member History",
+      "hidden": true,
+      "disabled": false,
+      "cls": "btn btn-primary",
+	  "tabIndex": 1,
+      "iconClass": "fa fa-eye",
+      "handler": {
+        "methodName": "getMemberDetailsFromMemberId"
+      }
+    }
+  ]
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "fetchMemberIdSearch" |
+| widget  | String  | Name of the widget |  "buttonGroup" |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| buttons  | Array  | Contain Array of button object | See the Button Object Inforamtion |
+
+###### Button Object Inforamtion
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the button | "fetchMemberIdSearch" |
+| label  | String  | Label of the button | "Member History" |
+| disabled  | Boolean  | Disabled status of the button| true or false |
+| hidden  | Boolean  | Hidden status of the button | true or false |
+| tabIndex  | Number  | Tab index for the button | true or false |
+| cls  | String  | Class for the button | "btn btn-primary" |
+| iconClass  | String  | Class for the button icon | "fa fa-eye" |
+| handler  | Object  | listener for the button | {"methodName": "getMemberDetailsFromMemberId"} |
