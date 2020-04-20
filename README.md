@@ -1216,7 +1216,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | mandatory  | Boolean  | Mandatory status of the widget | true or false |
 | tabIndex  | Number  | Tab index for the widget | true or false |
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "notifyUsersCheckBoxChange"} |
-| properties.children  | Array  | Contain checkboxlist | See the above config |
+| properties.children  | Array  | Contain checkboxlist | { "name" : "notifyAlways", "text": "Notify Always"}  |
 
 #### Button Group widget
 ```
@@ -1262,3 +1262,81 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | cls  | String  | Class for the button | "btn btn-primary" |
 | iconClass  | String  | Class for the button icon | "fa fa-eye" |
 | handler  | Object  | listener for the button | {"methodName": "getMemberDetailsFromMemberId"} |
+
+#### Datefield widget
+```
+{
+  "name": "patientLastKnownToBeWell",
+  "tabIndex": 1,
+  "oneLiner": true,
+  "text": "Date patient last known to be well?",
+  "format": "MM-DD-YYYY",
+  "requiredISODate": false,
+  "allowUserToEdit": true,
+  "disabled": false,
+  "hidden": false,
+  "mandatory": false,
+  "widget": "datefield",
+  "properties": {
+    "defaultValue": null
+  },
+  "listeners": {
+    "change": {
+      "methodName": "patientLastKnownToBeWellChange"
+    }
+  },
+  "buttons": [
+    {
+      "name": "fetchMemberIdSearch",
+      "label": "Member History",
+      "hidden": true,
+      "disabled": false,
+      "cls": "btn btn-primary",
+      "tabIndex": 1,
+      "iconClass": "fa fa-eye",
+      "handler": {
+        "methodName": "getMemberDetailsFromMemberId"
+      }
+    }
+  ],
+  "checkbox": {
+    "name": "notifyUserCheckBoxGrp",
+    "tabIndex": 1,
+    "text": "Notify User",
+    "widget": "checkboxgroup",
+    "oneLiner": true,
+    "mandatory": true,
+    "disabled": false,
+    "hidden": false,
+    "listeners": {
+      "change": {
+        "methodName": "notifyUsersCheckBoxChange"
+      }
+    },
+    "children": [
+      {
+        "name": "notifyUsers",
+        "text": "Notify"
+      }
+    ]
+  }
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "caseType" |
+| text  | String  | Label for the widget | "Case Type" |
+| widget  | String  | Name of the widget |  "combo" |
+| format  | String  | Moment Date format for Datefield |  "MM-DD-YYYY" |
+| allowUserToEdit  | Boolean  | Edit status from keyboard |  true or false |
+| requiredISODate  | Boolean  | Store ISO date string status along with date string |  true or false |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "patientLastKnownToBeWellChange"} |
+| properties.defaultValue  | String  | Default value from the date widget | "03-03-1994" |
+| buttons  | Array  | Contain buttonlist attached to datefield | same as buttons information from buttongroup widget |
+| checkbox  | Object  | Contain checkbox information attached to datefield | same as checkbox widget information |
