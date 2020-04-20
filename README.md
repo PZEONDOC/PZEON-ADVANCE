@@ -1340,3 +1340,50 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | properties.defaultValue  | String  | Default value from the date widget | "03-03-1994" |
 | buttons  | Array  | Contain buttonlist attached to datefield | same as buttons information from buttongroup widget |
 | checkbox  | Object  | Contain checkbox information attached to datefield | same as checkbox widget information |
+
+#### Datetimefield widget
+```
+{
+  "name": "door_ob_INROrdered",
+  "tabIndex": 1,
+  "text": "INR Ordered",
+  "format": "MM-DD-YYYY hh:mm:ss A",
+  "requiredISODate": false,
+  "oneLiner": true,
+  "disabled": false,
+  "hidden": false,
+  "mandatory": true,
+  "allowUserToEdit": true,
+  "widget": "dateTimeField",
+  "emptyText": "INR Ordered",
+  "properties": {
+    "defaultValue": null
+  },
+  "options": {
+    "showMeridian": true
+  },
+  "listeners": {
+    "change": {
+      "methodName": "door_ob_INROrderedChange"
+    }
+  }
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "door_ob_INROrdered" |
+| text  | String  | Label for the widget | "INR Ordered" |
+| widget  | String  | Name of the widget |  "dateTimeField" |
+| format  | String  | Moment Date format for Datefield |  "MM-DD-YYYY hh:mm:ss A" |
+| emptyText  | String  | Placeholder for Datefield |  "INR Ordered" |
+| allowUserToEdit  | Boolean  | Edit status from keyboard |  true or false |
+| requiredISODate  | Boolean  | Store ISO date string status along with date string |  true or false |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "door_ob_INROrderedChange"} |
+| properties.defaultValue  | String  | Default value from the date widget | null |
+| options.showMeridian  | Boolean  | Meridian show status | true or false |
