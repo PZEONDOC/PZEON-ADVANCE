@@ -1375,8 +1375,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | name  | String  | Name of the widget | "door_ob_INROrdered" |
 | text  | String  | Label for the widget | "INR Ordered" |
 | widget  | String  | Name of the widget |  "dateTimeField" |
-| format  | String  | Moment Date format for Datefield |  "MM-DD-YYYY hh:mm:ss A" |
-| emptyText  | String  | Placeholder for Datefield |  "INR Ordered" |
+| format  | String  | Moment Date format for DateTimeField widget |  "MM-DD-YYYY hh:mm:ss A" |
+| emptyText  | String  | Placeholder for widget |  "INR Ordered" |
 | allowUserToEdit  | Boolean  | Edit status from keyboard |  true or false |
 | requiredISODate  | Boolean  | Store ISO date string status along with date string |  true or false |
 | oneLiner  | Boolean  | Oneliner view status | true or false |
@@ -1385,5 +1385,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | mandatory  | Boolean  | Mandatory status of the widget | true or false |
 | tabIndex  | Number  | Tab index for the widget | true or false |
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "door_ob_INROrderedChange"} |
-| properties.defaultValue  | String  | Default value from the date widget | null |
+| properties.defaultValue  | String  | Default value from the DateTimeField widget | null |
 | options.showMeridian  | Boolean  | Meridian show status | true or false |
