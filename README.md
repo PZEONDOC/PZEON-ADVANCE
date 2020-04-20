@@ -698,6 +698,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	"type": "string",
 	"tabIndex": 1,
 	"widget": "combo",
+	"listeners": {
+    	"change": {
+     		"methodName": "caseTypeChange"
+     	}
+    },
 	"properties": {
 		"datasource": [
 			"High",
@@ -1169,3 +1174,46 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "update"} |
 | properties.datasource  | Array  | Contain datasource for Combo | ["High", "Medium High"] |
 | properties.multiselect  | Boolean  | Multiple select status for Combo | true or false |
+
+
+#### Checkbox widget
+```
+{
+  "name": "notifyUserCheckBoxGrp",
+  "tabIndex": 1,
+  "text": "Notify User",
+  "widget": "checkboxgroup",
+  "oneLiner": true,
+  "mandatory": true,
+  "disabled" : false,
+  "hidden" : false,
+  "listeners": {
+    "change": {
+      "methodName": "notifyUsersCheckBoxChange"
+    }
+  },
+  "children": [
+    {
+      "name": "notifyUsers",
+      "text": "Notify",
+    },
+    {
+      "name": "notifyAlways",
+      "text": "Notify Always",
+    }
+  ]
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "notifyUserCheckBoxGrp" |
+| text  | String  | Label for the widget | "Notify User" |
+| widget  | String  | Name of the widget |  "checkboxgroup" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "notifyUsersCheckBoxChange"} |
+| properties.children  | Array  | Contain checkboxlist | See the above config |
