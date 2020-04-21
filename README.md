@@ -1440,3 +1440,114 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | showDownloadBtn  | Boolean  | Status for showing Download button in file upload modal | true or false |
 | showRemoveBtn  | Boolean  |Status for showing Remove button in file upload modal | true or false |
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "auditChange"} |
+
+#### Grid widget
+
+```
+{
+  "name": "nonMedicalGrid",
+  "text": "",
+  "widget": "grid",
+  "cls": "nonMedicalGrid",
+  "isModal": false,
+  "collapsable": false,
+  "columns": [
+    {
+      "name": "",
+      "checkBoxModel": true,
+      "text": "",
+      "dataIndex": "",
+      "width": "2%"
+    },
+    {
+      "name": "Id",
+      "serialNo": true,
+      "text": "Sl No.",
+      "dataIndex": "id",
+      "renderer": "",
+      "widget": "numberfield",
+      "readOnly": true,
+      "hidden": false
+    },
+    {
+      "name": "dateNonMedical",
+      "requiredISODate": true,
+      "text": "Date",
+      "oneLiner": false,
+      "dataIndex": "dateNonMedical",
+      "mandatory": false,
+      "ownerEditable": false,
+      "renderer": "",
+      "widget": "datefield",
+      "value": "",
+      "properties": {
+        "datasource": [],
+        "defaultValue": null
+      },
+      "emptyText": "Date",
+      "rules": [],
+      "disabled": false
+    },
+    {
+      "name": "departmentReviewStatus",
+      "dataIndex": "departmentReviewStatus",
+      "id": "",
+      "tabIndex": 1,
+      "text": "Review Status",
+      "description": "Review Status",
+      "type": "string",
+      "tooltip": {
+        "enabled": false,
+        "format": null
+      },
+      "mandatory": false,
+      "oneLiner": false,
+      "widget": "combo",
+      "isResetBtnVisible": false,
+      "properties": {
+        "datasource": [
+          "Pending",
+          "Response Required",
+          "Complete"
+        ],
+        "defaultValue": "Pending"
+      },
+      "value": "Pending",
+      "emptyText": "",
+      "rules": [],
+      "hidden": false,
+      "disabled": true
+    }
+  ],
+  "buttons": [
+    {
+      "name": "add",
+      "text": "Add New",
+      "type": "default-add",
+      "handler": ""
+    },
+    {
+      "name": "remove",
+      "text": "Remove",
+      "type": "default-remove",
+      "handler": ""
+    }
+  ]
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "nonMedicalGrid" |
+| text  | String  | Label for the widget | "Non Medical Grid" |
+| widget  | String  | Name of the widget |  "grid" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| collapsable  | Boolean  | Collapsable status of the widget | true or false |
+| isModal  | Boolean  | Open in modal status On Add or Edit rows of Grid | true or false |
+| cls  | String  | External Class name for the grid | "nonMedicalGrid" |
+| columns  | Array  | Containing list of widget config for each column of the grid | Same as widget config |
+| buttons  | Array  | Containing list of button config for the widget |{"name": "add","text": "Add New","type": "default-add","handler": ""},|
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "auditChange"} |
