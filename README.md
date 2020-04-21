@@ -1387,3 +1387,56 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "door_ob_INROrderedChange"} |
 | properties.defaultValue  | String  | Default value from the DateTimeField widget | null |
 | options.showMeridian  | Boolean  | Meridian show status | true or false |
+
+#### FileuploadContainer widget
+
+```
+{
+  "name": "audit",
+  "text": "Audit",
+  "widget": "fileuploadContainer",
+  "oneLiner": true,
+  "tabIndex": 1,
+  "displayText": "Audit Documents",
+  "isVersion": true,
+  "fileType": [
+    "pdf",
+    "jpg"
+  ],
+  "showDescription": true,
+  "maxSize": 50,
+  "mandatory": false,
+  "showViewBtn": true,
+  "disabled": true,
+  "displayAllFile": true,
+  "showDownloadBtn": true,
+  "showRemoveBtn": true,
+  "listeners": {
+    "change": {
+      "methodName": "auditChange"
+    }
+  }
+}
+
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "audit" |
+| text  | String  | Label for the widget | "Audit" |
+| widget  | String  | Name of the widget |  "fileuploadContainer" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| displayText  | String  | Text for file upload modal header | "Audit Documents" |
+| isVersion  | String  | Status allowing single pr multiple file upload | true or false |
+| fileType  | Array  | Contain list of file types allowed to upload | ["pdf","jpg"] |
+| showDescription  | Boolean  | Status for showing descriotion field in file upload modal | true or false |
+| maxSize  | Number  | Maximum size allowed for uploaded file | 50 |
+| showViewBtn  | Boolean  | Status for showing View button in file upload modal | true or false |
+| displayAllFile  | Boolean  | Status for display all file in widget | true or false |
+| showDownloadBtn  | Boolean  | Status for showing Download button in file upload modal | true or false |
+| showRemoveBtn  | Boolean  |Status for showing Remove button in file upload modal | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "auditChange"} |
