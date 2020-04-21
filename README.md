@@ -1551,3 +1551,22 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | columns  | Array  | Containing list of widget config for each column of the grid | Same as widget config |
 | buttons  | Array  | Containing list of button config for the widget |{"name": "add","text": "Add New","type": "default-add","handler": ""},|
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "auditChange"} |
+
+#### Notification Widget
+
+```
+{
+   "name":"note_name",
+   "text":"Note! Opened and selected nodes will be saved in the user's browser, so when returning to the same tree the previous state will be restored.",
+   "hidden":false
+   "cls":"alert"
+   "widget":"note"
+}
+```
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "note_name" |
+| text  | String  | Label for the widget | "Note! Opened and selected nodes will be saved in the user's browser, so when returning to the same tree the previous state will be restored." |
+| widget  | String  | Name of the widget |  "note" |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| cls  | String  | External Class name for the wodget | "alert" |
