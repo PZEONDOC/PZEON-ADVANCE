@@ -549,6 +549,71 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 	
 ## Widget Configuration
 
+### Tab Configuration
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "incidentInfo" |
+| text  | String  | Tab Header Text for the widget | "Case Info" |
+| widget  | String  | Name of the widget |  "panel" |
+| isHeaderVisible  | Boolean  | Header visible status of the tab | true or false |
+| fields  | Array  | Contain list of widget objects |  |
+```
+[
+  {
+    "name": "incidentInfo",
+    "text": "Case Info",
+    "isHeaderVisible": false,
+    "fields": [
+      {
+        "name": "docThreadId",
+        "text": "Doc Thread Id",
+        "description": "Doc Thread Id",
+        "oneLiner": true,
+        "type": "number",
+        "maxsearchlength": 500,
+        "widget": "numberfield",
+        "value": "",
+        "emptyText": "Doc Thread Id",
+        "iconClass": "",
+        "hidden": true
+      }
+    ]
+  }
+]
+```
+
+#### Panel Widget
+```
+{
+  "name": "incidentDetails",
+  "widget": "panel",
+  "icon": " fa fa-stethoscope",
+  "headText": "",
+  "fields": [
+    {
+      "name": "docThreadId",
+      "text": "Doc Thread Id",
+      "description": "Doc Thread Id",
+      "oneLiner": true,
+      "type": "number",
+      "maxsearchlength": 500,
+      "widget": "numberfield",
+      "value": "",
+      "emptyText": "Doc Thread Id",
+      "iconClass": "",
+      "hidden": true
+    }
+  ]
+}
+```
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "incidentDetails" |
+| headText  | String  | Header Text for the widget | "Incident Details" |
+| widget  | String  | Name of the widget |  "panel" |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| fields  | Array  | Contain list of widget objects |  |
+
 #### Bundle Filter Widget
 ```
 {
@@ -1871,3 +1936,22 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "discoveryOfStrokeSymptomsTimeChange"} |
 | options.defaultTime  | String  | Default value for the widget | "" |
 | options.showMeridian  | Boolean  | Meridian show status | true or false |
+
+#### Label Widget
+
+```
+{
+  "name": "textEditor",
+  "text": "Text Editor",
+  "hidden": "false",
+  "oneLiner": "true",
+  "mandatory": true,
+  "widget": "textEditor",
+  "disabled": false,
+  "spellcheck": true,
+  "encode": true
+}
+
+```
+###### Description
+It takes any widget config except panel widget and set the lable text as text property of widget.
