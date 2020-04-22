@@ -1833,3 +1833,41 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | buttons  | Array  | Contain buttonlist attached to textfield | same as buttons information from buttongroup widget |
 | checkbox  | Object  | Contain checkbox information attached to textfield | same as checkbox widget information |
 | listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "incidentIdChange"} |
+
+#### Timefield Widget
+
+```
+{
+  "name": "discoveryOfStrokeSymptomsTime",
+  "tabIndex": 1,
+  "oneLiner": true,
+  "text": "Time of discovery of stroke symptoms?",
+  "description": "Time of discovery of stroke symptoms?",
+  "widget": "timefield",
+  "options": {
+    "showMeridian": false,
+    "defaultTime": ""
+  },
+  "emptyText": "Time of discovery of stroke symptoms?",
+  "listeners": {
+    "change": {
+      "methodName": "onTimeChange"
+    }
+  }
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "discoveryOfStrokeSymptomsTime" |
+| text  | String  | Label for the widget | "Time of discovery of stroke symptoms?" |
+| widget  | String  | Name of the widget |  "timefield" |
+| emptyText  | String  | Placeholder for widget |  "Time of discovery of stroke symptoms?" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| tabIndex  | Number  | Tab index for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "discoveryOfStrokeSymptomsTimeChange"} |
+| options.defaultTime  | String  | Default value for the widget | "" |
+| options.showMeridian  | Boolean  | Meridian show status | true or false |
