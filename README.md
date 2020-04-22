@@ -1570,3 +1570,266 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 | widget  | String  | Name of the widget |  "note" |
 | hidden  | Boolean  | Hidden status of the widget | true or false |
 | cls  | String  | External Class name for the wodget | "alert" |
+
+#### Numberfield Widget
+```
+{
+  "name": "incidentId",
+  "text": "Incident ID",
+  "oneLiner": true,
+  "type": "number",
+  "mandatory": true,
+  "widget": "numberfield",
+  "emptyText": "Incident ID",
+  "pattern": "[0-9]",
+  "range": [
+    10.5,
+    12.4
+  ],
+  "decimalPrecisionValue": 3,
+  "hidden": true,
+  "disabled": false,
+  "spellcheck": true,
+  "listeners": {
+    "change": {
+      "methodName": "update"
+    },
+    "keyup": {
+      "methodName": "update"
+    },
+    "click": {
+      "methodName": "update"
+    }
+  }
+}
+```
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "incidentId" |
+| text  | String  | Label for the widget | "Incident ID" |
+| widget  | String  | Name of the widget |  "numberfield" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| cls  | String  | External Class name for the grid | "nonMedicalGrid" |
+| emptyText  | String  | Placeholder for the widget | "Incident ID" |
+| pattern  | String  | Input Pattern for the widget | "[0-9]" |
+| range  | String  | Range of input for the widget | "[10.5, 12.4]" |
+| decimalPrecisionValue  | Number  | Number of precesion after decimal for the widget | 3 |
+| spellcheck  | Boolean  | Spell check status for the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "incidentIdChange"} |
+
+#### Radiogroup Widget
+```
+{
+  "name": "isActionTaken",
+  "tabIndex": 1,
+  "text": "Is Action Taken",
+  "oneLiner": true,
+  "mandatory": true,
+  "hidden": false,
+  "widget": "radio",
+  "properties": {
+    "datasource": [
+      "Yes",
+      "No"
+    ],
+    "defaultValue": "No"
+  },
+  "listeners": {
+    "change": {
+      "methodName": "update"
+    }
+  }
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "isActionTaken" |
+| text  | String  | Label for the widget | "Is Action Taken" |
+| widget  | String  | Name of the widget |  "radio" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| properties.datasource  | Array  | Contain datasource item | ["Yes", "No"] |
+| properties.defaultValue  | String  | Contain default value for widget | "No" |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "isActionTakenChage"} |
+
+#### Richtext Editor widget
+
+```
+{
+  "name": "textEditor",
+  "text": "Text Editor",
+  "hidden": "false",
+  "oneLiner": "true",
+  "mandatory": true,
+  "widget": "textEditor",
+  "disabled": false,
+  "spellcheck": true,
+  "encode": true
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "textEditor" |
+| text  | String  | Label for the widget | "Text Editor" |
+| widget  | String  | Name of the widget |  "radio" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "textEditorChange"} |
+
+#### Textarea widget
+
+```
+{
+  "name": "caseShortDescription",
+  "text": "Case Short Description",
+  "mandatory": true,
+  "widget": "textarea",
+  "maxlength": 100,
+  "minlength": 10,
+  "emptyText": "Case Short Description",
+  "rows": "30",
+  "cols": "40",
+  "disabled": true,
+  "readonly": true,
+  "oneLiner": true,
+  "tabindex": 1,
+  "spellcheck": true,
+  "wrap": "off",
+  "modalView": true,
+  "listeners": {
+    "change": {
+      "methodName": "update"
+    },
+    "keyup": {
+      "methodName": "update"
+    },
+    "click": {
+      "methodName": "update"
+    }
+  }
+}
+```
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "caseShortDescription" |
+| text  | String  | Label for the widget | "Case Short Description" |
+| widget  | String  | Name of the widget |  "textarea" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| maxlength  | Number  | Maxlength for the widget | 100 |
+| minlength  | Number  | Minlength for the widget | 10 |
+| emptyText  | String  | Placeholder for the widget | "Case Short Description" |
+| rows  | String  | Number of rows for textarea | "30" |
+| cols  | String  | Number of columns for textarea | "30" |
+| wrap  | String  | Wrap status of the widget | "on" or "off" |
+| spellcheck  | Boolean  | Spellcheck status of the widget | true or false |
+| modalView  | Boolean  | Modal view status of the widget | true or false |
+| readonly  | Boolean  | Readonly proerty of the widget | true or false |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "caseShortDescriptionChange"} |
+
+#### Textfield widget
+
+```
+{
+  "name": "incidentId",
+  "text": "Incident ID",
+  "oneLiner": true,
+  "type": "string",
+  "maxsearchlength": 500,
+  "minlength": 10,
+  "mandatory": true,
+  "widget": "textfield",
+  "emptyText": "Incident ID",
+  "pattern": "[6789]",
+  "range": [
+    10.5,
+    12.4
+  ],
+  "decimalPrecisionValue": 3,
+  "hidden": true,
+  "disabled": false,
+  "spellcheck": true,
+  "countryCode": "IN",
+  "listeners": {
+    "change": {
+      "methodName": "update"
+    },
+    "keyup": {
+      "methodName": "update"
+    },
+    "click": {
+      "methodName": "update"
+    }
+  },
+  "buttons": [
+    {
+      "name": "fetchMemberIdSearch",
+      "label": "Member History",
+      "hidden": true,
+      "disabled": false,
+      "cls": "btn btn-primary",
+      "tabIndex": 1,
+      "iconClass": "fa fa-eye",
+      "handler": {
+        "methodName": "getMemberDetailsFromMemberId"
+      }
+    }
+  ],
+  "checkbox": {
+    "name": "notifyUserCheckBoxGrp",
+    "tabIndex": 1,
+    "text": "Notify User",
+    "widget": "checkboxgroup",
+    "oneLiner": true,
+    "mandatory": true,
+    "disabled": false,
+    "hidden": false,
+    "listeners": {
+      "change": {
+        "methodName": "notifyUsersCheckBoxChange"
+      }
+    },
+    "children": [
+      {
+        "name": "notifyUsers",
+        "text": "Notify"
+      }
+    ]
+  }
+
+}
+```
+
+| Properties  | Type | Description | Example |
+| ----------  | ---- | ----------- | ------- |
+| name  | String  | Name of the widget | "incidentId" |
+| text  | String  | Label for the widget | "Incident ID" |
+| type  | String  | Type of input for the widget | "string", "number" |
+| minlength  | Number  | Minlength for the widget | 10 |
+| maxsearchlength  | Number  | Maxsearch length for the widget | 500 |
+| widget  | String  | Name of the widget |  "textfield" |
+| oneLiner  | Boolean  | Oneliner view status | true or false |
+| disabled  | Boolean  | Disabled status of the widget| true or false |
+| hidden  | Boolean  | Hidden status of the widget | true or false |
+| mandatory  | Boolean  | Mandatory status of the widget | true or false |
+| cls  | String  | External Class name for the grid | "nonMedicalGrid" |
+| emptyText  | String  | Placeholder for the widget | "Incident ID" |
+| pattern  | String  | Input Pattern for the widget | "[0-9]" |
+| range  | String  | Range of input for the widget | "[10.5, 12.4]" |
+| decimalPrecisionValue  | Number  | Number of precesion after decimal for the widget | 3 |
+| spellcheck  | Boolean  | Spell check status for the widget | true or false |
+| countryCode  | String  | Contrycode for phonenumber validation | true or false |
+| buttons  | Array  | Contain buttonlist attached to textfield | same as buttons information from buttongroup widget |
+| checkbox  | Object  | Contain checkbox information attached to textfield | same as checkbox widget information |
+| listeners  | Object  | Contain listers information for the widget | "change": {"methodName": "incidentIdChange"} |
